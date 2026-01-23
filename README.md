@@ -8,6 +8,8 @@ Syntax highlighting, snippets, and language support for [HuJSON](https://github.
 
 ## What is HuJSON?
 
+> [!TIP] HuJSON is the format Tailscale uses for its configuration files like the [tailnet policy file](https://tailscale.com/kb/1395/tailnet-policy-file). It's designed to be easy for humans to read and write.
+
 HuJSON is a minimal extension of JSON that adds two features to make it more suitable for human-editable configuration files:
 
 - **Comments**: C-style line comments (`//`) and block comments (`/* */`)
@@ -104,7 +106,7 @@ Refer to [Configuration](docs/configuration.md) to customize these settings.
 
 - [Getting started](docs/getting-started.md) - Installation and setup
 - [Features](docs/features.md) - Detailed feature documentation
-- [Snippets Reference](docs/snippets.md) - All available snippets
+- [Snippets reference](docs/snippets.md) - All available snippets
 - [Configuration](docs/configuration.md) - Settings and customization
 - [Contributing](CONTRIBUTING.md) - How to contribute
 - [Changelog](docs/changelog.md) - Version history

@@ -63,18 +63,6 @@ Associate additional file extensions with HuJSON:
 }
 ```
 
-### Common configuration files
-
-Some applications use HuJSON for configuration. Associate their files:
-
-```json
-{
-  "files.associations": {
-    "tailscale.conf": "hujson"
-  }
-}
-```
-
 ## Editor behavior
 
 ### Indentation
