@@ -8,7 +8,8 @@ Syntax highlighting, snippets, and language support for [HuJSON](https://github.
 
 ## What is HuJSON?
 
-> [!TIP] HuJSON is the format Tailscale uses for its configuration files like the [tailnet policy file](https://tailscale.com/kb/1395/tailnet-policy-file). It's designed to be easy for humans to read and write.
+> [!TIP]
+> HuJSON is the format Tailscale uses for its configuration files like the [tailnet policy file](https://tailscale.com/kb/1395/tailnet-policy-file). It's designed to be easy for humans to read and write.
 
 HuJSON is a minimal extension of JSON that adds two features to make it more suitable for human-editable configuration files:
 
