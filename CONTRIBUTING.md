@@ -174,27 +174,30 @@ Confirm all required files appear in the output.
 
 ## Release a new version
 
-A GitHub Actions workflow automates the release process. To release a new version:
+A release script automates the release process. To release a new version:
 
-1. Update the version number in `package.json`.
+```bash
+npm run release <version>
+# or
+./scripts/release.sh <version>
+```
 
-1. Update `CHANGELOG.md` with the new version and changes.
+For example, to release version 1.2.0:
 
-1. Commit the changes:
+```bash
+npm run release 1.2.0
+```
 
-   ```bash
-   git add package.json CHANGELOG.md
-   git commit -m "Release v1.2.0"
-   ```
+The script:
 
-1. Create and push a version tag:
+1. Validates the version format (semver).
+1. Updates the version in `package.json`.
+1. Adds a new entry to `docs/changelog.md` (you'll be prompted to fill in the details).
+1. Commits the changes.
+1. Creates a git tag.
+1. Pushes the commit and tag to origin.
 
-   ```bash
-   git tag v1.2.0
-   git push origin main v1.2.0
-   ```
-
-The workflow builds the VSIX package and creates a GitHub release with the package attached.
+A GitHub Actions workflow then builds the VSIX package and creates a GitHub release with the package attached. The workflow verifies that the tag version matches `package.json` to prevent version mismatches.
 
 ## Submit your changes
 

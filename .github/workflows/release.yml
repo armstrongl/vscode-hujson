@@ -18,14 +18,38 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Extract version from tag
+        id: tag_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Verify package.json version matches tag
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          TAG_VERSION="${{ steps.tag_version.outputs.VERSION }}"
+          if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then
+            echo "::error::Version mismatch: package.json has $PKG_VERSION but tag is v$TAG_VERSION"
+            echo "Please ensure package.json version matches the tag version."
+            exit 1
+          fi
+          echo "Version verified: $PKG_VERSION"
+
       - name: Install vsce
         run: npm install -g @vscode/vsce
 
       - name: Package extension
-        run: vsce package
+        run: |
+          vsce package
+          # Verify the VSIX was created with correct version
+          VSIX_FILE="hujson-${{ steps.tag_version.outputs.VERSION }}.vsix"
+          if [ ! -f "$VSIX_FILE" ]; then
+            echo "::error::Expected VSIX file $VSIX_FILE not found"
+            ls -la *.vsix
+            exit 1
+          fi
+          echo "VSIX_FILE=$VSIX_FILE" >> $GITHUB_ENV
 
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          files: '*.vsix'
+          files: ${{ env.VSIX_FILE }}
           generate_release_notes: true

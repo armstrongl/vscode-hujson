@@ -4,7 +4,7 @@ All notable changes to the HuJSON VS Code extension are documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [1.1.2] - 2025-01-23
 
 ### Added
 
@@ -93,6 +93,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 | Version | Date | Highlights |
 |---------|------|------------|
-| Unreleased | - | GitHub Actions release workflow, consolidated CONTRIBUTING.md |
+| 1.1.2 | 2025-01-23 | GitHub Actions release workflow, consolidated CONTRIBUTING.md |
 | 1.1.0 | 2025-01-23 | Snippets, improved grammar, documentation |
 | 1.0.0 | Initial | Basic syntax highlighting and language support |
