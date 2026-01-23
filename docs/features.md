@@ -91,6 +91,7 @@ Click next to a bracket to highlight its matching pair:
 With VS Code's bracket pair colorization enabled, nested brackets display in different colors.
 
 Enable in settings:
+
 ```json
 {
   "editor.bracketPairColorization.enabled": true

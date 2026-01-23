@@ -93,6 +93,7 @@ HuJSON supports two comment styles:
 ```
 
 Toggle comments with:
+
 - Line comment: `Cmd+/` (macOS) or `Ctrl+/` (Windows/Linux)
 - Block comment: `Shift+Option+A` (macOS) or `Shift+Alt+A` (Windows/Linux)
 
@@ -124,12 +125,12 @@ Type a snippet prefix and press `Tab` to expand:
 
 1. Use `Tab` to move between placeholders.
 
-Refer to the [Snippets Reference](snippets.md) for all available snippets.
+Refer to the [Snippets reference](snippets.md) for all available snippets.
 
 ## Next steps
 
 - [Features](features.md) - All extension features
-- [Snippets Reference](snippets.md) - All available snippets
+- [Snippets reference](snippets.md) - All available snippets
 - [Configuration](configuration.md) - Customize the extension
 
 ## Troubleshooting

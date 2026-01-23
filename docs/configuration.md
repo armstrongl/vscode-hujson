@@ -154,6 +154,7 @@ Control when snippets appear:
 ```
 
 Options:
+
 - `"top"` - Show snippets above other suggestions
 - `"bottom"` - Show snippets below other suggestions
 - `"inline"` - Show snippets mixed with other suggestions
@@ -234,13 +235,13 @@ Here is a recommended configuration for HuJSON editing:
 ### Settings not applied
 
 1. Ensure you are editing a file recognized as HuJSON (check status bar).
-2. Reload VS Code after changing settings.
-3. Check for conflicting settings in workspace vs user settings.
+1. Reload VS Code after changing settings.
+1. Check for conflicting settings in workspace vs user settings.
 
 ### Finding effective settings
 
 Use the Settings editor to see which settings apply:
 
 1. Open Settings (`Cmd+,` or `Ctrl+,`).
-2. Search for the setting name.
-3. Check the "Modified" indicator and scope (User/Workspace/Default).
+1. Search for the setting name.
+1. Check the "Modified" indicator and scope (User/Workspace/Default).

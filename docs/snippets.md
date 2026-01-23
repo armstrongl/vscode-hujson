@@ -1,14 +1,14 @@
-# Snippets Reference
+# Snippets reference
 
 The HuJSON extension includes 10 built-in snippets for common editing patterns. Type a prefix and press `Tab` to expand.
 
 ## Use snippets
 
 1. Type the snippet prefix (e.g., `obj`).
-2. Press `Tab` to expand the snippet.
-3. Fill in the placeholder values.
-4. Press `Tab` to move to the next placeholder.
-5. Press `Escape` or move the cursor to exit snippet mode.
+1. Press `Tab` to expand the snippet.
+1. Fill in the placeholder values.
+1. Press `Tab` to move to the next placeholder.
+1. Press `Escape` or move the cursor to exit snippet mode.
 
 ## Available snippets
 
@@ -25,8 +25,9 @@ Creates an empty object with a key-value placeholder.
 ```
 
 **Placeholders:**
+
 1. Property name (default: empty)
-2. Property value (default: empty)
+1. Property value (default: empty)
 
 ---
 
@@ -43,6 +44,7 @@ Creates an empty array.
 ```
 
 **Placeholders:**
+
 1. Array content (cursor positioned inside)
 
 ---
@@ -58,8 +60,9 @@ Creates a key-value pair with a string value.
 ```
 
 **Placeholders:**
+
 1. Key name (default: "key")
-2. String value (default: "value")
+1. String value (default: "value")
 
 ---
 
@@ -74,8 +77,9 @@ Creates a key-value pair with a number value.
 ```
 
 **Placeholders:**
+
 1. Key name (default: "key")
-2. Number value (default: 0)
+1. Number value (default: 0)
 
 ---
 
@@ -90,8 +94,9 @@ Creates a key-value pair with a boolean value. Provides a dropdown choice betwee
 ```
 
 **Placeholders:**
+
 1. Key name (default: "key")
-2. Boolean value (choice: true/false)
+1. Boolean value (choice: true/false)
 
 ---
 
@@ -108,8 +113,9 @@ Creates a key-value pair with a nested object.
 ```
 
 **Placeholders:**
+
 1. Key name (default: "key")
-2. Object content (cursor positioned inside)
+1. Object content (cursor positioned inside)
 
 ---
 
@@ -126,8 +132,9 @@ Creates a key-value pair with an array value.
 ```
 
 **Placeholders:**
+
 1. Key name (default: "key")
-2. Array content (cursor positioned inside)
+1. Array content (cursor positioned inside)
 
 ---
 
@@ -142,7 +149,8 @@ Creates a line comment.
 ```
 
 **Placeholders:**
-1. Comment text (cursor positioned after `// `)
+
+1. Comment text (cursor positioned after `//`)
 
 ---
 
@@ -159,6 +167,7 @@ Creates a multi-line block comment.
 ```
 
 **Placeholders:**
+
 1. Comment text (cursor positioned after ` * `)
 
 ---
@@ -179,10 +188,11 @@ Creates a basic configuration file structure with common fields.
 ```
 
 **Placeholders:**
+
 1. Comment description (default: "Configuration file")
-2. Name value (default: "my-config")
-3. Version value (default: "1.0.0")
-4. Additional content (cursor positioned for more fields)
+1. Name value (default: "my-config")
+1. Version value (default: "1.0.0")
+1. Additional content (cursor positioned for more fields)
 
 ## Tips
 
@@ -191,7 +201,7 @@ Creates a basic configuration file structure with common fields.
 You can use snippets inside other snippets. For example:
 
 1. Type `obj` and press `Tab` to create an object.
-2. Inside the object, type `kv` and press `Tab` to add a key-value pair.
+1. Inside the object, type `kv` and press `Tab` to add a key-value pair.
 
 ### Snippet alternatives
 
