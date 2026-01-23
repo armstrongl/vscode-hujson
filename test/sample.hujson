@@ -1,0 +1,35 @@
+{
+  // Line comment at start
+  "string": "hello world",
+  "number": 42,
+  "float": 3.14159,
+  "negative": -100,
+  "scientific": 1.5e10,
+  "boolean_true": true,
+  "boolean_false": false,
+  "null_value": null,
+
+  /* Block comment
+   * spanning multiple
+   * lines
+   */
+  "escaped_string": "Hello\nWorld\t\"Quoted\"\\Backslash",
+
+  "array": [
+    1,
+    2,
+    3,  // trailing comma in array
+  ],
+
+  "nested_object": {
+    "inner_key": "inner_value",
+    "inner_array": [
+      {
+        "deep": true,
+      },
+    ],  // trailing comma
+  },
+
+  // Comment before last item
+  "last_key": "last_value",  // trailing comma at end
+}

@@ -1,0 +1,154 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "HuJSON",
+  "scopeName": "source.hujson",
+  "patterns": [
+    { "include": "#value" }
+  ],
+  "repository": {
+    "value": {
+      "patterns": [
+        { "include": "#comments" },
+        { "include": "#object" },
+        { "include": "#array" },
+        { "include": "#string" },
+        { "include": "#number" },
+        { "include": "#constant" },
+        { "include": "#string-unterminated" }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.hujson",
+          "begin": "//",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.comment.hujson" }
+          },
+          "end": "$"
+        },
+        {
+          "name": "comment.block.hujson",
+          "begin": "/\\*",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.comment.begin.hujson" }
+          },
+          "end": "\\*/",
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.comment.end.hujson" }
+          }
+        }
+      ]
+    },
+    "object": {
+      "name": "meta.structure.dictionary.hujson",
+      "begin": "\\{",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.dictionary.begin.hujson" }
+      },
+      "end": "\\}",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.dictionary.end.hujson" }
+      },
+      "patterns": [
+        { "include": "#comments" },
+        { "include": "#object-key" },
+        { "include": "#value" },
+        {
+          "name": "punctuation.separator.dictionary.hujson",
+          "match": ","
+        }
+      ]
+    },
+    "object-key": {
+      "comment": "Match object key followed by colon to distinguish from string values",
+      "match": "(\"(?:[^\"\\\\]|\\\\.)*\")\\s*(:)",
+      "captures": {
+        "1": {
+          "name": "support.type.property-name.hujson",
+          "patterns": [
+            {
+              "name": "punctuation.support.type.property-name.begin.hujson",
+              "match": "^\""
+            },
+            {
+              "name": "punctuation.support.type.property-name.end.hujson",
+              "match": "\"$"
+            },
+            { "include": "#string-content" }
+          ]
+        },
+        "2": { "name": "punctuation.separator.dictionary.key-value.hujson" }
+      }
+    },
+    "array": {
+      "name": "meta.structure.array.hujson",
+      "begin": "\\[",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.array.begin.hujson" }
+      },
+      "end": "\\]",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.array.end.hujson" }
+      },
+      "patterns": [
+        { "include": "#comments" },
+        { "include": "#value" },
+        {
+          "name": "punctuation.separator.array.hujson",
+          "match": ","
+        }
+      ]
+    },
+    "string": {
+      "name": "string.quoted.double.hujson",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.hujson" }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.hujson" }
+      },
+      "patterns": [
+        { "include": "#string-content" }
+      ]
+    },
+    "string-content": {
+      "patterns": [
+        {
+          "name": "constant.character.escape.hujson",
+          "match": "\\\\(?:[\"\\\\/bfnrt]|u[0-9A-Fa-f]{4})"
+        },
+        {
+          "name": "invalid.illegal.unrecognized-string-escape.hujson",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "string-unterminated": {
+      "name": "invalid.illegal.unterminated-string.hujson",
+      "match": "\"(?:[^\"\\\\]|\\\\.)*$"
+    },
+    "number": {
+      "name": "constant.numeric.hujson",
+      "match": "-?(?:0|[1-9]\\d*)(?:\\.\\d+)?(?:[eE][+-]?\\d+)?"
+    },
+    "constant": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.true.hujson",
+          "match": "\\btrue\\b"
+        },
+        {
+          "name": "constant.language.boolean.false.hujson",
+          "match": "\\bfalse\\b"
+        },
+        {
+          "name": "constant.language.null.hujson",
+          "match": "\\bnull\\b"
+        }
+      ]
+    }
+  }
+}

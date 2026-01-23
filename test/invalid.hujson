@@ -1,0 +1,7 @@
+{
+  // This file contains intentional errors to test error highlighting
+
+  "unterminated_string": "this string never ends
+  "invalid_escape": "\x invalid escape sequence",
+  "another_valid": "this is fine",
+}

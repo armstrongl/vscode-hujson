@@ -1,0 +1,48 @@
+{
+  // Edge cases for grammar testing
+
+  // Empty structures
+  "empty_object": {},
+  "empty_array": [],
+  "empty_string": "",
+
+  // Unicode
+  "unicode": "Hello 世界 🌍",
+  "unicode_escape": "\u0048\u0065\u006c\u006c\u006f",
+
+  // Numbers edge cases
+  "zero": 0,
+  "negative_zero": -0,
+  "max_safe_int": 9007199254740991,
+  "min_safe_int": -9007199254740991,
+  "scientific_neg": 1e-10,
+  "scientific_pos": 1E+10,
+
+  // Strings with special characters
+  "all_escapes": "\"\\/\b\f\n\r\t",
+  "url": "https://example.com/path?query=value&other=123",
+
+  // Deeply nested
+  "level1": {
+    "level2": {
+      "level3": {
+        "level4": {
+          "level5": "deep",
+        },
+      },
+    },
+  },
+
+  /* Multi-line block comment
+     with various content:
+     - bullets
+     * stars
+     // nested line comment syntax (not actually a comment)
+     /* nested block syntax (not actually nested) */
+  "after_block": true,
+
+  // Consecutive comments
+  // are allowed
+  // like this
+  "after_consecutive": "value",
+}

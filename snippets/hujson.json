@@ -1,0 +1,79 @@
+{
+  "Empty Object": {
+    "prefix": ["obj", "{}"],
+    "body": [
+      "{",
+      "\t\"$1\": \"$2\"$0",
+      "}"
+    ],
+    "description": "Empty HuJSON object"
+  },
+  "Empty Array": {
+    "prefix": ["arr", "[]"],
+    "body": [
+      "[",
+      "\t$0",
+      "]"
+    ],
+    "description": "Empty HuJSON array"
+  },
+  "Key-Value Pair": {
+    "prefix": ["kv", "key"],
+    "body": "\"${1:key}\": \"${2:value}\"$0",
+    "description": "Key-value pair with string value"
+  },
+  "Key-Value (Number)": {
+    "prefix": ["kvn", "keynum"],
+    "body": "\"${1:key}\": ${2:0}$0",
+    "description": "Key-value pair with number value"
+  },
+  "Key-Value (Boolean)": {
+    "prefix": ["kvb", "keybool"],
+    "body": "\"${1:key}\": ${2|true,false|}$0",
+    "description": "Key-value pair with boolean value"
+  },
+  "Key-Value (Object)": {
+    "prefix": ["kvo", "keyobj"],
+    "body": [
+      "\"${1:key}\": {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Key-value pair with nested object"
+  },
+  "Key-Value (Array)": {
+    "prefix": ["kva", "keyarr"],
+    "body": [
+      "\"${1:key}\": [",
+      "\t$0",
+      "]"
+    ],
+    "description": "Key-value pair with array value"
+  },
+  "Line Comment": {
+    "prefix": ["//", "comment"],
+    "body": "// $0",
+    "description": "Line comment"
+  },
+  "Block Comment": {
+    "prefix": ["/*", "blockcomment"],
+    "body": [
+      "/*",
+      " * $0",
+      " */"
+    ],
+    "description": "Block comment"
+  },
+  "Config Template": {
+    "prefix": ["config", "template"],
+    "body": [
+      "{",
+      "\t// ${1:Configuration file}",
+      "\t\"name\": \"${2:my-config}\",",
+      "\t\"version\": \"${3:1.0.0}\",",
+      "\t$0",
+      "}"
+    ],
+    "description": "Basic configuration file template"
+  }
+}

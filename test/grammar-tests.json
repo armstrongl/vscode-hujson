@@ -1,0 +1,16 @@
+{
+  "name": "HuJSON Grammar Tests",
+  "scopeName": "source.hujson",
+  "testFiles": [
+    {
+      "file": "sample.hujson",
+      "assertions": [
+        {
+          "line": 3,
+          "column": 3,
+          "scopes": ["source.hujson", "meta.structure.dictionary.hujson", "support.type.property-name.hujson"]
+        }
+      ]
+    }
+  ]
+}
