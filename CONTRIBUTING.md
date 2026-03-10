@@ -15,7 +15,7 @@ Before you begin, install:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/tailscale/vscode-hujson.git
+   git clone https://github.com/armstrongl/vscode-hujson.git
    cd vscode-hujson
    ```
 
