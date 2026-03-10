@@ -13,7 +13,7 @@ This guide covers installation and basic usage of the HuJSON VS Code extension.
 
 A VSIX file is a packaged VS Code extension. To install:
 
-1. Download the latest `.vsix` file from the [releases page](https://github.com/tailscale/vscode-hujson/releases).
+1. Download the latest `.vsix` file from the [releases page](https://github.com/armstrongl/vscode-hujson/releases).
 
 1. Open VS Code.
 
